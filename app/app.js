@@ -13,7 +13,12 @@ function getRequest(searchTerm){
 			img = item.data.url;
 			console.log(item.data);
 			if (img.match(/\.(jpg|jpeg|png|gif)$/)){
-				$('#images').append('<div class="image"><img class="fill-box" src="' + img + '"/></div>');
+				$('#images').append('<a href="' + img + '"><div class="image"><img class="fill-box" src="' + img + '"/></div></a>');
+				$(".fill-box").fillBox();
+			}
+			else if (img.search("imgur") != -1) {
+				img = img+".jpg"
+				$('#images').append('<a href="' + img + '"><div class="image"><img class="fill-box" src="' + img + '"/></div></a>');
 				$(".fill-box").fillBox();
 			}
 	    });
