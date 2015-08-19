@@ -1,0 +1,10 @@
+/*#images>img {
+	max-height: 200px;
+}*/
+
+.image {
+	width: 250px;
+	height:250px;
+	overflow: hidden;
+	display: inline-block;
+}
