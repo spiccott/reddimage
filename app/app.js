@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$("#search-term").submit(function(event){
 		event.preventDefault();
+		$('#images').html('');
 		var searchTerm = $("#query").val();
 		getRequest(searchTerm);
 	});
